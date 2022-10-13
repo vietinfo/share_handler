@@ -4,7 +4,7 @@ repository: https://github.com/AboutShout/share_handler/tree/main/share_handler
 version: 0.0.16
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.13.0 <3.0.0"
   flutter: ">=2.0.0"
 
 flutter:
@@ -26,12 +26,23 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  share_handler_android: ^0.0.6
-  # share_handler_android:
-  #   path: ../share_handler_android
-  share_handler_ios: ^0.0.9
-  # share_handler_ios:
-  #   path: ../share_handler_ios
+#  share_handler_android: ^0.0.6
+
+  share_handler_android:
+    git:
+      url: https://github.com/vietinfo/share_handler.git
+      path: share_handler_android
+
+#  share_handler_android:
+#    path: ../share_handler_android
+#  share_handler_ios: ^0.0.9
+#  share_handler_ios:
+#    path: ../share_handler_ios
+
+  share_handler_ios:
+    git:
+      url: https://github.com/vietinfo/share_handler.git
+      path: share_handler_ios
   # share_handler_linux:
   #   path: ../share_handler_linux 
   # share_handler_macos:
@@ -40,9 +51,14 @@ dependencies:
   #   path: ../share_handler_web 
   # share_handler_windows:
   #   path: ../share_handler_windows 
-  share_handler_platform_interface: ^0.0.4
-  # share_handler_platform_interface:
-  #   path: ../share_handler_platform_interface
+#  share_handler_platform_interface: ^0.0.4
+#  share_handler_platform_interface:
+#    path: ../share_handler_platform_interface
+
+  share_handler_platform_interface:
+    git:
+      url: https://github.com/vietinfo/share_handler.git
+      path: share_handler_platform_interface
 
 dev_dependencies:
   flutter_lints:
